@@ -1,0 +1,51 @@
+.section_login {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 500px;
+    border: 1px solid #0000001a;
+    box-shadow: 1px 1px 15px #00000036;
+
+    h1 {
+        margin: 1rem auto;
+        font-size: 2em;
+    }
+
+    form {      
+        .input_area {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem auto;
+
+            label {
+                font-weight: 700;
+            }
+
+            input {
+                width: 100%;
+                margin: .5rem auto;
+                padding: .5rem;
+            }
+
+            input:focus {
+                border: 1px solid #92caff;
+                box-shadow: 1px 1px 12px 1px #68b6ff;
+            }
+        }
+
+        .register_redirect {
+            margin: 1.5rem auto;
+            text-align: center;
+            
+            span {
+                a {
+                    color: blue;
+                }
+
+                a:hover {
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}

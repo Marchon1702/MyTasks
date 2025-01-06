@@ -1,0 +1,10 @@
+.each_task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        margin: .3rem auto;
+        background-color: #000000;
+        color: #fff;
+        border-radius: .2rem;
+    }
