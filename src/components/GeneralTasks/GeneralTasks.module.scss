@@ -1,13 +1,14 @@
 .general_tasks {
-  max-width: 500px;
+  display: block;
+  margin: auto;
+  max-width: 800px;
   padding: 1rem;
-  border: 1px solid #00000031;
 
   ul {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none; /* Internet Explorer e Edge */
-    max-height: 300px;
+    max-height: 290px;
     padding: .5rem;
   }
 
