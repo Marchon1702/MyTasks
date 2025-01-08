@@ -2,11 +2,9 @@ import { createContext, ReactNode, useState } from "react"
 import { ITask } from "../interface/ITask";
 export const ApplicationContext = createContext<any>(null);
 
-
 interface ApplicationProviderProps {
     children: ReactNode
 }
-
 
 const ApplicationProvider = ({children}: ApplicationProviderProps) => {
 
@@ -14,6 +12,7 @@ const ApplicationProvider = ({children}: ApplicationProviderProps) => {
         return sessionStorage.getItem("token") || ""
     });
     const [tasks, setTasks] = useState<ITask[]>([])
+    const [taskToEdit, setTaskToEdit] = useState<ITask | null>(null)
 
     return (
         <ApplicationContext.Provider 
@@ -22,7 +21,9 @@ const ApplicationProvider = ({children}: ApplicationProviderProps) => {
                 token,
                 setToken,
                 tasks,
-                setTasks
+                setTasks,
+                taskToEdit,
+                setTaskToEdit
             }
         }>
             {children}

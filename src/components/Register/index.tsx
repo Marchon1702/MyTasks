@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import BtnDefault from "../Buttons/BtnDefault";
 import { useEffect, useState } from "react";
 import { IErro } from "../../interface/IErros";
-import { gerarId } from "../../utils";
+import { gerarId } from "../../utils/gerarId";
 import { registrarConta } from "../../services/requests";
 
 const Register = () => {

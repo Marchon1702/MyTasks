@@ -1,29 +1,31 @@
 import { useEffect } from "react";
 import GeneralTasks from "../components/GeneralTasks";
-import MainHeader from "../components/GeneralTasks/MainHeader";
 import MainSection from "../components/MainSection";
 import { useApplicationContext } from "../hooks/useApplicationContext";
 import { useNavigate } from "react-router-dom";
 
 const TasksPage = () => {
-  const { token, atribuirTasks } = useApplicationContext();
+  const { token } = useApplicationContext();
 
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if(!token) navigate("/")
-
-    atribuirTasks()
-  }, [])
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if(!token) navigate("/")
-  }, [token])
+    if (!token) {
+      navigate("/");
+      return;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+      return;
+    }
+  }, [token]);
 
   return (
     <main>
       <MainSection>
-        <MainHeader />
         <GeneralTasks />
       </MainSection>
     </main>

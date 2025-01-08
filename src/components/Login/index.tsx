@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { fazerLogin } from "../../services/requests";
 import { useApplicationContext } from "../../hooks/useApplicationContext";
 import { IErro } from "../../interface/IErros";
-import { gerarId } from "../../utils";
+import { gerarId } from "../../utils/gerarId";
 
 const Login = () => {
   const { token, setToken } = useApplicationContext();

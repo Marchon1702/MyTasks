@@ -4,15 +4,38 @@
   max-width: 800px;
   padding: 1rem;
 
-  ul {
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none; /* Internet Explorer e Edge */
-    max-height: 290px;
-    padding: .5rem;
+  h2 {
+    text-align: center;
   }
 
-  h3 {
-    text-align: center;
+  .task_area {
+    ul {
+      overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none; /* Internet Explorer e Edge */
+      max-height: 290px;
+      padding: 0.5rem;
+
+      span {
+        text-align: center;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 0.5rem 0.2rem;
+        margin: 0.5rem 0;
+        border-radius: 0.3rem;
+        border: 1px solid black;
+      }
+    }
+
+    .addTask_area {
+      display: flex;
+      column-gap: .3rem;
+    }
   }
 }

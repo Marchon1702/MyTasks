@@ -1,0 +1,17 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000e8;
+    z-index: 1;
+}    
+
+.overlay_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//Criar outras classes caso queira mudar o posicionamento dos modais

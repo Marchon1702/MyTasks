@@ -1,5 +1,14 @@
 .main_header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     padding: 1rem;
+    width: 100%;
+    
+    select {
+        justify-self: end;
+        padding: .5rem;
+        font-weight: 700;
+        border-radius: 1rem;
+        color: #fff;
+        background-color: #000000;
+    }
 }

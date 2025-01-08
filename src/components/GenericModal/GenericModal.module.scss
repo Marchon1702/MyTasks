@@ -1,0 +1,20 @@
+.generic_modal {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: .7rem;
+    z-index: 2;
+
+    .header_modal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .descripton_area {
+        font-size: 12px;
+        text-align: center;
+        padding: .3rem 1rem;
+        color: gray;
+    }
+}

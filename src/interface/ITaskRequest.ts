@@ -1,8 +1,6 @@
-export interface ITask {
-    id: number
+export interface ITaskRequest {
     nome: string
     prioridade: string
     dataInicio: string
     dataFim: string
-    concluida: boolean
 }

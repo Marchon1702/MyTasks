@@ -1,0 +1,29 @@
+.addTaskForm {
+    div {
+        margin: 1rem 0;
+    }
+
+    .flex_inputs {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        column-gap: .3rem;
+
+        span {
+            font-weight: 700;
+            position: relative;
+            position: relative;
+            transform: translateY(6px);
+        }
+    }
+
+    .select_input {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        
+        select {
+            padding: .2rem 1rem;
+        }
+    }
+}

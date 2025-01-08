@@ -1,6 +1,7 @@
 import http from "../http";
 import { ILoginRequest } from "../interface/ILoginRequest";
 import { ITask } from "../interface/ITask";
+import { ITaskRequest } from "../interface/ITaskRequest";
 
 export const fazerLogin = async (
   bodyRequest: ILoginRequest
@@ -50,7 +51,7 @@ export const registrarConta = async (
   }
 };
 
-export const recuperarTarefas = async () => {
+export const recuperarTarefas = async (): Promise<ITask[] | undefined> => {
   try {
     const response = await http.get("/tarefas")
 
@@ -59,11 +60,11 @@ export const recuperarTarefas = async () => {
     return tarefas
 
   } catch (e) {
-    console.error("Não foi possivel recuperar suas tarefas")
+    console.error("Não foi possivel recuperar suas tarefas" + e)
   }
 }
 
-export const atualizarTarefa = async (tarefa: ITask) => {
+export const atualizarTarefa = async (tarefa: ITask): Promise<number> => {
 
   try {
     const response = await http.put("/tarefas", tarefa)
@@ -72,4 +73,26 @@ export const atualizarTarefa = async (tarefa: ITask) => {
   }catch (e) {
     throw new Error("Não foi possivel atualizar tarefa" + e)
   } 
+}
+
+export const deletarTarefa = async (tarefa: ITask): Promise<number> => {
+  try {
+    const response = await http.delete(`/tarefas/${tarefa.id}`)
+
+    return response.status
+
+  } catch (e) {
+    throw new Error("Não foi possivel deletar tarefa" + e)
+  }
+}
+
+export const adicionarTarefa = async (tarefa: ITaskRequest): Promise<number> => {
+  try {
+    const response = await http.post("/tarefas", tarefa)
+
+    return response.status
+
+  } catch (e) {
+    throw new Error("Tarefa não adicionada" + e)
+  }
 }

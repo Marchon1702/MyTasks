@@ -8,10 +8,19 @@
         color: #fff;
         border-radius: .2rem;
 
-        span {
+        .infos_task {
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: .5rem;
+        }
+
+        .actions_task {
+            display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            column-gap: .5rem;
+            align-items: center;
+            row-gap: .7rem;
 
             .checkTask_area {
                 input {

@@ -18,7 +18,7 @@ main {
   flex: 1;
 }
 
-button {
+button, select {
   cursor: pointer;
 }
 
@@ -26,6 +26,7 @@ a {
   text-decoration: none;
   color: #000000;
 }
+
 
 .ul_erros {
   color: red;
